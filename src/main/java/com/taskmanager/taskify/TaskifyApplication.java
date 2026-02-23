@@ -1,4 +1,4 @@
-package com.taskify.taskify;
+package com.taskmanager.taskify;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
