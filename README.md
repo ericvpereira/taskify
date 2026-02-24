@@ -1,6 +1,6 @@
-# TaskFlow API
+# Taskify API
 
-TaskFlow API é uma aplicação backend desenvolvida com Spring Boot, utilizando JPA/Hibernate para persistência de dados.  
+Taskify API é uma aplicação backend desenvolvida com Spring Boot, utilizando JPA/Hibernate para persistência de dados.  
 O projeto consiste em uma API RESTful para gerenciamento de tarefas (To-Do List), aplicando boas práticas de arquitetura em camadas.
 
 ## 🚀 Tecnologias Utilizadas
