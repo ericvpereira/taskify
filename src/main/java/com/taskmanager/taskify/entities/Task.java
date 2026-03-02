@@ -7,6 +7,8 @@ import java.util.Objects;
 import com.taskmanager.taskify.entities.enums.TaskStatus;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -23,21 +25,17 @@ public class Task implements Serializable {
 	private Long id;
 	private String title;
 	private String description;
+	
+	@Enumerated(EnumType.STRING)
 	private TaskStatus status;
 	private Integer priority;
 	private LocalDateTime createdAt;
 		
 	public Task() {}
 
-	public Task(Long id, String title, String description, TaskStatus status, Integer priority,
-			LocalDateTime createdAt) {
-		super();
-		this.id = id;
-		this.title = title;
-		this.description = description;
-		this.status = status;
-		this.priority = priority;
-		this.createdAt = createdAt;
+	public Task(String title, String description, Integer priority) {
+		this.status = TaskStatus.PENDING;
+		this.createdAt = LocalDateTime.now();
 	}
 
 	public Long getId() {
